@@ -22,6 +22,8 @@
     }
 }
 
+.hover1:hover {}
+
 .wc-block-grid__products {
     display: -webkit-box;
     display: flex;
