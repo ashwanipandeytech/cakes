@@ -20,7 +20,7 @@ body {
 .nd_options_container {
     width: 1200px;
     margin: auto;
-    padding: 0px;
+    padding: 4px;
 }
 
 .nd_options_clearfix:after {
