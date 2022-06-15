@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
     <style type="text/css" data-type="vc_custom-css">
         /*POST GRID FILTER*/
@@ -3477,7 +3478,21 @@
                                                 <div class="bounce">
                                                     <rs-layer id="slider-10-slide-22-layer-4" data-type="text" data-rsp_ch="on" data-xy="x:r,r,c,c;xo:200px,200px,0,0;y:m;yo:-20px,-20px,-30px,-30px;" data-text="w:normal;s:40,40,30,30;l:65,80,60,60;ls:10px;fw:500;a:center;" data-dim="w:833px;" data-frame_0="x:100%;o:1;tp:600;"
                                                         data-frame_0_mask="u:t;x:-100%;" data-frame_1="tp:600;e:Power4.easeInOut;st:300;sp:1000;sR:300;" data-frame_1_mask="u:t;" data-frame_999="x:-100%;tp:600;e:Power4.easeInOut;st:w;sp:500;sR:7700;" data-frame_999_mask="u:t;x:100%;"
-                                                        style="z-index:15;font-family:Cabin;text-transform:uppercase;">Delicious Homemade <br/>Cakes & Desserts
+                                                        style="z-index:15;font-family:Cabin;text-transform:uppercase;">
+
+                                                        <div class="ml15">
+                                                            <span class="word">Delicious Homemade</span>
+                                                            <br/>
+                                                            <span class="word">Cakes & Desserts</span>
+
+                                                        </div>
+
+                                                        <!-- Delicious Homemade <br/>Cakes & Desserts -->
+
+                                                        <!-- <h1 class="ml15">
+                                                            <span class="word">Out</span>
+                                                            <span class="word">now</span>
+                                                        </h1> -->
                                                         <br/>
                                                         <br/>
                                                     </rs-layer>
@@ -5694,6 +5709,23 @@ class=" nicdark_display_inline_block nd_options_float_left nd_options_font_weigh
             });
 
         });
+        anime.timeline({
+                loop: true
+            })
+            .add({
+                targets: '.ml15 .word',
+                scale: [14, 1],
+                opacity: [0, 1],
+                easing: "easeOutCirc",
+                duration: 800,
+                delay: (el, i) => 800 * i
+            }).add({
+                targets: '.ml15',
+                opacity: 0,
+                duration: 1000,
+                easing: "easeOutExpo",
+                delay: 1000
+            });
     </script>
     <style>
         .inner-text {
@@ -5771,6 +5803,21 @@ class=" nicdark_display_inline_block nd_options_float_left nd_options_font_weigh
         .topset {
             /* top: 8px;
             position: relative; */
+        }
+        
+        .ml15 {
+            font-weight: 800;
+            /* font-size: 3.8em; */
+            text-transform: uppercase;
+            letter-spacing: 0.4em;
+            padding-top: 20px;
+            text-align: center !important;
+        }
+        
+        .ml15 .word {
+            margin-top: 20px;
+            display: inline-block;
+            line-height: 1em;
         }
     </style>
 </body>
