@@ -2800,6 +2800,40 @@
             left: 28% !important;
             display: block !important;
         }
+        
+        @media all and (max-width:786px) {
+            .bounce {
+                left: 0px !important
+            }
+            rs-sbg {
+                background-position: unset !important;
+            }
+            #right2 {
+                width: 373px !important;
+            }
+            #leftimgs {
+                padding-left: 81px !important;
+            }
+            .flavour {
+                margin-left: 73px !important;
+            }
+            #logoimg {
+                top: 5px!important;
+                left: -128px!important;
+            }
+        }
+        
+        @media all and (max-width:400px) {
+            #leftimgs {
+                padding-left: 60px !important;
+            }
+            .flavour {
+                margin-left: 43px !important;
+            }
+            #right2 {
+                width: 353px !important;
+            }
+        }
     </style>
     <noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>
     <!-- own style -->
@@ -3190,7 +3224,7 @@
 
                         <!--LOGO-->
                         <a href="https://www.nicdarkthemes.com/themes/bakery/wp/demo/pastry">
-                            <img style="top:-5px;left:-154px" alt="" class="nd_options_position_absolute nd_options_left_15" style="left:-15px" width="400" src="images/logo.png"></a>
+                            <img style="top:-5px;left:-154px" alt="" id="logoimg" class="nd_options_position_absolute nd_options_left_15" style="left:-15px" width="400" src="images/logo.png"></a>
                         <strong class="jetblack" style="top: -5px;
                         margin-left: 77px;
                         font-size: 22px;
@@ -3313,12 +3347,12 @@
                     <div class="nd_options_section nd_options_text_align_center nd_options_display_none nd_options_display_block_responsive">
                         <div class="nd_options_section nd_options_height_20"></div>
 
-                        <img style="top:-5px;left:-154px" alt="" class="nd_options_position_absolute nd_options_left_15" style="left:-15px" width="400" src="images/logo.png"></a>
-                        <b class="jetblack" style="top: -5px;
+                        <img style="top:5px;left:-134px" alt="" class="nd_options_position_absolute nd_options_left_15" style="left:-15px" width="400" src="images/logo.png"></a>
+                        <strong class="jetblack" style="top: -5px;
                         margin-left: 77px;
                         font-size: 22px;
-                        color: #77cfcf !important;">  Cakes PopUp
-                        </b>
+                        color: #24bbbf !important;">  Cakes Pop Up
+                        </strong>
 
                         <div class="nd_options_section nd_options_height_10"></div>
 
@@ -3472,7 +3506,7 @@
                                     <rs-module id="rev_slider_10_1" style="display:none;" data-version="6.1.5">
                                         <rs-slides>
                                             <rs-slide data-key="rs-22" data-title="Slide" data-anim="ei:d;eo:d;s:900;r:0;t:fade;sl:d;" data-firstanim="t:fade;s:1000;sl:7;">
-                                                <img src="images/banner.png" title="CAKES" width="1920" height="1200" data-parallax="8" class="rev-slidebg" data-no-retina>
+                                                <img src="images/banner.png" id="bannerimg" title="CAKES" width="1920" height="1200" data-parallax="8" class="rev-slidebg" data-no-retina>
                                                 <!--
 							-->
                                                 <div class="bounce">
@@ -3516,10 +3550,7 @@
                                                 <!--
 
 							-->
-                                                <rs-layer id="slider-10-slide-22-layer-12" class="tp-shape tp-shapewrapper" data-type="shape" data-rsp_ch="on" data-xy="x:c;y:m;" data-text="a:inherit;" data-dim="w:400px,400px,360px,360px;h:500px,500px,460px,460px;" data-basealign="slide" data-border="boc:#ffffff;bow:4px,4px,4px,4px;"
-                                                    data-frame_0="x:100%;o:1;tp:600;" data-frame_0_mask="u:t;x:-100%;" data-frame_1="tp:600;e:Power4.easeInOut;st:100;sp:1000;sR:100;" data-frame_1_mask="u:t;" data-frame_999="x:100%;tp:600;e:Power4.easeInOut;st:w;sp:500;sR:7900;"
-                                                    data-frame_999_mask="u:t;" style="z-index:10;">
-                                                </rs-layer>
+
                                                 <!--
 
 							-->
@@ -4358,7 +4389,7 @@ class=" nicdark_display_inline_block nd_options_float_left nd_options_font_weigh
                         </div>
                     </div>
                     <div class="vc_row wpb_row vc_row-fluid ">
-                        <div class="wpb_column vc_column_container vc_col-sm-3" style="padding-left: 109px;">
+                        <div class="wpb_column vc_column_container vc_col-sm-3" style="padding-left: 109px;" id="leftimgs">
 
                             <div class="nd_options_section nd_options_position_relative ">
                                 <div style="font-size:px;line-height:px; padding: 21px;width: 99px;text-align: center;" class="   nd_options_first_font ">
@@ -4390,7 +4421,7 @@ class=" nicdark_display_inline_block nd_options_float_left nd_options_font_weigh
 
                         </div>
                         <div class="wpb_column vc_column_container vc_col-sm-6">
-                            <div><img src="images/right2.png" width="698"></div>
+                            <div><img src="images/right2.png" width="698" id="right2"></div>
                         </div>
                         <div class="wpb_column vc_column_container vc_col-sm-3" style="padding-left: 79px;">
                             <div class="nd_options_section nd_options_position_relative ">
@@ -5609,8 +5640,24 @@ class=" nicdark_display_inline_block nd_options_float_left nd_options_font_weigh
             autoplaySpeed: 4000,
             speed: 200,
             slidesToShow: 3,
+            adaptiveHeight: true,
+            responsive: [
 
-            adaptiveHeight: true
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }, {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+
+            ]
         });
 
         function seeMore() {
@@ -5753,7 +5800,7 @@ class=" nicdark_display_inline_block nd_options_float_left nd_options_font_weigh
         }
         
         .bounce {
-            left: 261px !important;
+            left: 261px;
             position: absolute;
         }
         
